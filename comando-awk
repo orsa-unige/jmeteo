@@ -1,0 +1,11 @@
+
+
+Going to
+
+    http://www.csvjson.com/csv2json
+
+importing an archive dump with the header on the first line (-a -A)
+
+"array" option gives an array.
+"hash" needs an edit on date,time columns in order to convert 2017-12-21,13:00 into 2017-12-21T13:00:00.
+
