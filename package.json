@@ -1,0 +1,17 @@
+{
+  "name": "jmeteo",
+  "version": "0.0.1",
+  "description": "visualizing meteo station davis pro 2 weather",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Davide Ricci",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "d3": "^4.12.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
+  }
+}
