@@ -1,31 +1,26 @@
 
+d3.json("./stanotte.json", function(err,json) {
 
-//import {d3} from 'node_modules/d3/build/d3.min.js';
+    var desc= d3.select('body')
+	.append("ul");
 
-
-
-
-
-var dataset = []
-d3.json("meno-x.json", function(err,data) {
-
-
-var asd=Object.keys(data).map(function(key) {
-        var datarray = {};
-        datarray[key] = data[key];
-        return datarray;
-});
-
-    console.log(data)
-    console.log(asd)
-    
-    var ul = d3.select('body').append('ul');
-
-    ul.selectAll('li')
-        .data(asd)
+    desc
+	.selectAll('li')
+        .data( [json[0].data[39], json[0].data[0], json[0].data[2] ]  )
         .enter()
         .append('li')
-        .text(function(d){return Object.keys(d) +" →  "+ Object.values(d)} );
-    });
+        .text(function(d){ return d.name+" → "+d.description; } );
+    
+    var ul = d3.select('body').append('ul')
 
-
+    ul
+        .append('li')
+        .text(json[0].data[39].name+" →  "+json[0].data[0].name+" →  "+json[0].data[2].name  );
+    
+    ul.selectAll('li')
+        .data(json)
+        .enter()
+        .append('li')
+        .text(function(d,i){ return d.data[39].value+" →  "+d.data[0].value+" →  "+d.data[2].value; } );
+    
+});
