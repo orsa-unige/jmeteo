@@ -9,9 +9,9 @@
   "author": "Davide Ricci",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "d3": "^4.12.2",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.9"
+    "bootstrap": "^4.1.1",
+    "d3": "^4.13.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4"
   }
 }
